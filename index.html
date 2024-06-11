@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caller ID Lookup</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Caller ID Lookup</h1>
+            <form action="{{ url_for('lookup') }}" method="POST">
+                <label for="phone_number">Enter Phone Number (in E.164 format):</label>
+                <input type="text" id="phone_number" name="phone_number" placeholder="+919876543210" required>
+                <button type="submit">Lookup</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

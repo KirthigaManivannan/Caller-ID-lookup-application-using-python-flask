@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caller ID Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="result-container">
+            <h1>Caller ID Result</h1>
+            {% if result.error %}
+                <p>{{ result.error }}</p>
+            {% else %}
+                <ul>
+                    <li><strong>Number:</strong> {{ result.number }}</li>
+                    <li><strong>Country:</strong> {{ result.country }}</li>
+                    <li><strong>Carrier:</strong> {{ result.carrier }}</li>
+                    <li><strong>Line Type:</strong> {{ result.line_type }}</li>
+                    <li><strong>Caller Name:</strong> {{ result.caller_name }}</li>
+                    <li><strong>Caller Type:</strong> {{ result.caller_type }}</li>
+                </ul>
+            {% endif %}
+            <a href="/">Go back</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
